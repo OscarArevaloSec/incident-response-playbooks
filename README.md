@@ -1,34 +1,32 @@
 # Incident Response Playbooks
 
-Blue-team triage playbooks for common security incidents. Designed to demonstrate SOC analyst readiness and structured incident response thinking.
+This repository contains blue-team triage playbooks, incident documentation templates, and SOC-style investigation workflows. The goal is to demonstrate practical thinking for entry-level SOC Analyst, Security Operations Analyst, Cybersecurity Analyst, and Junior Incident Response Analyst roles.
 
-## Playbooks
+The playbooks are written for learning and portfolio demonstration. They do not represent confidential employer procedures and should be adapted to the tooling, authority, escalation paths, and legal requirements of a real organization.
 
-| Playbook | Incident Type | Status |
-|---|---|---|
-| `phishing-triage.md` | Reported phishing email triage | Planned |
-| `suspicious-login.md` | Suspicious authentication alert | Planned |
-| `malware-alert.md` | Malware detection and containment | Planned |
-| `data-exfiltration.md` | Potential data exfiltration alert | Planned |
+## Playbook Index
+
+| Playbook | Incident Type | Primary Skills Demonstrated | Status |
+|---|---|---|---|
+| [Phishing Triage](playbooks/phishing-triage.md) | Reported suspicious email | Header review, URL inspection, IOC collection, user impact assessment, escalation. | Drafted |
+| [Suspicious Login](playbooks/suspicious-login.md) | Authentication alert | Log review, source IP analysis, account impact, containment decisions. | Drafted |
+| [Malware Alert](playbooks/malware-alert.md) | Endpoint or EDR alert | Triage, host isolation logic, hash review, evidence collection, escalation. | Drafted |
 
 ## Templates
 
 | Template | Purpose |
 |---|---|
-| `incident-report-template.md` | Reusable incident report structure |
-| `ioc-collection-template.md` | Indicators of compromise collection sheet |
+| [Incident Report Template](templates/incident-report-template.md) | Reusable structure for documenting alert investigations and security incidents. |
+| [IOC Collection Template](templates/ioc-collection-template.md) | Structured table for collecting IP addresses, domains, URLs, hashes, file paths, CVEs, and related context. |
 
-## Playbook Structure
+## Playbook Method
 
-Each playbook follows this structure:
+Each playbook follows a consistent analyst workflow: detection, triage, investigation, containment, eradication and recovery, escalation, documentation, and lessons learned. This structure is intentionally simple because a useful playbook should help an analyst make better decisions under pressure.
 
-1. **Detection** — What triggered the alert and initial indicators
-2. **Triage** — Initial assessment steps and priority determination
-3. **Investigation** — Evidence collection and analysis steps
-4. **Containment** — Immediate actions to limit impact
-5. **Eradication & Recovery** — Remediation steps
-6. **Lessons Learned** — Post-incident documentation
+## Portfolio Intent
 
-## Purpose
+These documents are designed to show how I think through alerts. They emphasize evidence, assumptions, severity, business impact, and clear recommendations rather than tool screenshots alone.
 
-These playbooks are designed for learning and portfolio demonstration. They reflect real-world SOC workflows adapted from industry frameworks including NIST SP 800-61 and SANS incident response methodology.
+## Safety and Ethics
+
+Do not use these playbooks as authorization to investigate systems you do not own or administer. In a real environment, follow company policy, legal guidance, chain-of-custody requirements, and the approved escalation process.
